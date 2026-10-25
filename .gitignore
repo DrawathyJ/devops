@@ -1,0 +1,24 @@
+# Terraform state, plans, provider cache, and local overrides
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfplan
+terraform/crash.log
+terraform/override.tf
+terraform/override.tf.json
+terraform/*_override.tf
+terraform/*_override.tf.json
+
+# Local Terraform variables may contain subscription and network details
+terraform/terraform.tfvars
+terraform/*.auto.tfvars
+
+# Credentials and private keys
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+
+# Jenkins and local build output
+build/
+.jenkins/

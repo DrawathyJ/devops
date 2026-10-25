@@ -1,0 +1,20 @@
+# Terraform local files and state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local variable files may contain account-specific values
+terraform.tfvars
+*.auto.tfvars
+
+# Credentials and private keys
+*.pem
+*.key
+id_rsa
+id_rsa.pub
