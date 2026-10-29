@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CloudOps - Automated Azure CI/CD Platform powered by Jenkins, Terraform, and Microsoft Azure">
+  <meta name="description"
+    content="CloudOps - Automated Azure CI/CD Platform powered by Jenkins, Terraform, and Microsoft Azure">
   <title>CloudOps // Automated Azure CI/CD Platform</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg-base: #0a0e17;
@@ -68,7 +72,7 @@
       line-height: 1.6;
       min-height: 100vh;
       overflow-x: hidden;
-      background-image: 
+      background-image:
         radial-gradient(circle at 15% 20%, rgba(0, 120, 212, 0.12) 0%, transparent 40%),
         radial-gradient(circle at 85% 65%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 35%);
@@ -93,6 +97,7 @@
       border-bottom: 1px solid var(--border-subtle);
       transition: background var(--transition-fast);
     }
+
     [data-theme="light"] header {
       background: rgba(248, 250, 252, 0.85);
     }
@@ -222,9 +227,20 @@
     }
 
     @keyframes pulse {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      50% { transform: scale(1.6); opacity: 0; }
-      100% { transform: scale(0.9); opacity: 0; }
+      0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.6);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
     }
 
     .icon-btn {
@@ -262,8 +278,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Hero Section */
@@ -681,9 +704,18 @@
       height: 10px;
       border-radius: 50%;
     }
-    .dot-red { background: #ef4444; }
-    .dot-yellow { background: #f59e0b; }
-    .dot-green { background: #10b981; }
+
+    .dot-red {
+      background: #ef4444;
+    }
+
+    .dot-yellow {
+      background: #f59e0b;
+    }
+
+    .dot-green {
+      background: #10b981;
+    }
 
     .terminal-title {
       font-size: 0.78rem;
@@ -710,10 +742,22 @@
       color: var(--text-dim);
     }
 
-    .log-info { color: #38bdf8; }
-    .log-pass { color: #34d399; }
-    .log-warn { color: #fbbf24; }
-    .log-cmd { color: #e2e8f0; font-weight: 600; }
+    .log-info {
+      color: #38bdf8;
+    }
+
+    .log-pass {
+      color: #34d399;
+    }
+
+    .log-warn {
+      color: #fbbf24;
+    }
+
+    .log-cmd {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
 
     /* Interactive Task Manager */
     .task-input-box {
@@ -808,9 +852,23 @@
       font-weight: 600;
     }
 
-    .priority-critical { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); border: 1px solid rgba(244, 63, 94, 0.3); }
-    .priority-high { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .priority-normal { background: rgba(56, 189, 248, 0.15); color: var(--azure-cyan); border: 1px solid rgba(56, 189, 248, 0.3); }
+    .priority-critical {
+      background: rgba(244, 63, 94, 0.15);
+      color: var(--accent-rose);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .priority-high {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-amber);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .priority-normal {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--azure-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
 
     .del-btn {
       background: transparent;
@@ -954,15 +1012,19 @@
       .hero-grid {
         grid-template-columns: 1fr;
       }
+
       .grid-3 {
         grid-template-columns: 1fr;
       }
+
       .grid-2 {
         grid-template-columns: 1fr;
       }
+
       .nav-tabs {
         display: none;
       }
+
       .pipeline-stages {
         overflow-x: auto;
         padding-bottom: 12px;
@@ -970,6 +1032,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Top Sticky Header -->
@@ -978,7 +1041,8 @@
       <a href="#" class="brand" onclick="switchTab('overview')">
         <div class="brand-logo">
           <svg viewBox="0 0 24 24">
-            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+            <path
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z" />
           </svg>
         </div>
         <div class="brand-text">
@@ -1004,7 +1068,8 @@
           <span>ONLINE // 200 OK</span>
         </div>
         <button class="icon-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -1031,7 +1096,9 @@
             <span class="gradient-text">Azure Cloud Platform</span>
           </h2>
           <p class="hero-desc">
-            Welcome to the deployed web application! This application is provisioned, packaged, and automated via <strong>GitHub</strong>, <strong>Jenkins CI/CD</strong>, <strong>Terraform</strong>, and <strong>Microsoft Azure Linux VM (Nginx)</strong>.
+            Welcome to the deployed web application! This application is provisioned, packaged, and automated via
+            <strong>GitHub</strong>, <strong>Jenkins CI/CD</strong>, <strong>Terraform</strong>, and <strong>Microsoft
+              Azure Linux VM (Nginx)</strong>.
           </p>
           <div class="hero-actions">
             <button class="btn btn-primary" onclick="switchTab('pipeline')">
@@ -1062,7 +1129,8 @@
 
         <div class="hero-visual">
           <div class="hero-card-img">
-            <img src="assets/hero.jpg" alt="DevOps Cloud Infrastructure" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80'">
+            <img src="assets/hero.jpg" alt="DevOps Cloud Infrastructure"
+              onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80'">
             <div class="hero-floating-badge">
               <div class="badge-info">
                 <h4>Automated Deployment Stack</h4>
@@ -1080,26 +1148,41 @@
       <div class="grid-3" style="margin-top: 40px;">
         <div class="glass-card" onclick="switchTab('dashboard')" style="cursor: pointer;">
           <div style="margin-bottom: 12px; color: var(--azure-cyan);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18" />
+              <path d="M18 17V9" />
+              <path d="M13 17V5" />
+              <path d="M8 17v-3" />
+            </svg>
           </div>
           <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Real-time Telemetry</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem;">Live CPU utilization, active connection tracking, and responsive request simulator.</p>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Live CPU utilization, active connection tracking, and
+            responsive request simulator.</p>
         </div>
 
         <div class="glass-card" onclick="switchTab('pipeline')" style="cursor: pointer;">
           <div style="margin-bottom: 12px; color: var(--accent-purple);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
           </div>
           <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Interactive CI/CD Visualizer</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem;">Watch Jenkins pipeline stages execute in real-time with streaming terminal logs.</p>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Watch Jenkins pipeline stages execute in real-time
+            with streaming terminal logs.</p>
         </div>
 
         <div class="glass-card" onclick="switchTab('arch')" style="cursor: pointer;">
           <div style="margin-bottom: 12px; color: var(--accent-emerald);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+            </svg>
           </div>
           <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Terraform Topology</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem;">Explore the virtual network, subnet, security group rules, and Linux host configuration.</p>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Explore the virtual network, subnet, security group
+            rules, and Linux host configuration.</p>
         </div>
       </div>
     </section>
@@ -1119,7 +1202,8 @@
         <div class="glass-card">
           <div style="display: flex; justify-content: space-between; align-items: center;">
             <h3 style="font-size: 1.1rem; font-weight: 600;">Server Load & Latency (Live Canvas)</h3>
-            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--azure-cyan);">60 FPS Telemetry</span>
+            <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--azure-cyan);">60 FPS
+              Telemetry</span>
           </div>
           <div class="chart-container">
             <canvas id="liveChart"></canvas>
@@ -1175,7 +1259,9 @@
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
           <div>
             <h3 style="font-size: 1.15rem; font-weight: 700;">Pipeline: <code>azure-jenkins-cicd-job #42</code></h3>
-            <p style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">Trigger: Commit on <code>master</code> branch &bull; Agent: Any (Ubuntu)</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">Trigger: Commit on
+              <code>master</code> branch &bull; Agent: Any (Ubuntu)
+            </p>
           </div>
           <button class="btn btn-primary" id="btn-trigger-pipe" onclick="runPipelineSimulation()">
             <span>Trigger Pipeline Build</span>
@@ -1229,8 +1315,8 @@
             <span style="font-size: 0.72rem; color: var(--accent-emerald);">● Ready</span>
           </div>
           <div class="terminal-body" id="pipeline-terminal-body">
-[SYSTEM] Ready to trigger pipeline simulation.
-[SYSTEM] Click 'Trigger Pipeline Build' to begin stage verification.
+            [SYSTEM] Ready to trigger pipeline simulation.
+            [SYSTEM] Click 'Trigger Pipeline Build' to begin stage verification.
           </div>
         </div>
       </div>
@@ -1243,12 +1329,14 @@
       <div class="section-header">
         <span class="section-tag">Interactive App Feature</span>
         <h2 class="section-title">Cloud Deployment Task Manager</h2>
-        <p class="section-desc">Manage infrastructure tasks, security rotations, and release checklists with persistent storage.</p>
+        <p class="section-desc">Manage infrastructure tasks, security rotations, and release checklists with persistent
+          storage.</p>
       </div>
 
       <div class="glass-card">
         <form class="task-input-box" onsubmit="addTask(event)">
-          <input type="text" id="taskInput" class="task-input" placeholder="Add a new deployment task (e.g. Verify Nginx SSL certificates)..." required>
+          <input type="text" id="taskInput" class="task-input"
+            placeholder="Add a new deployment task (e.g. Verify Nginx SSL certificates)..." required>
           <select id="taskPriority" class="task-priority-select">
             <option value="normal">Priority: Normal</option>
             <option value="high">Priority: High</option>
@@ -1276,7 +1364,13 @@
       <div class="arch-card-grid">
         <div class="arch-card" onclick="showHclModal('rg')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
           </div>
           <div class="arch-title">Resource Group</div>
           <div class="arch-detail">azure-jenkins-cicd-rg</div>
@@ -1285,7 +1379,12 @@
 
         <div class="arch-card" onclick="showHclModal('vnet')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
           </div>
           <div class="arch-title">Virtual Network & Subnet</div>
           <div class="arch-detail">10.0.0.0/16 &bull; Subnet: 10.0.1.0/24</div>
@@ -1294,7 +1393,10 @@
 
         <div class="arch-card" onclick="showHclModal('nsg')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <div class="arch-title">Network Security Group</div>
           <div class="arch-detail">Allow HTTP (80) & Restricted SSH (22)</div>
@@ -1303,7 +1405,11 @@
 
         <div class="arch-card" onclick="showHclModal('ip')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
           </div>
           <div class="arch-title">Public IP Address</div>
           <div class="arch-detail">Static Standard SKU</div>
@@ -1312,7 +1418,12 @@
 
         <div class="arch-card" onclick="showHclModal('vm')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
           </div>
           <div class="arch-title">Linux VM Host</div>
           <div class="arch-detail">Standard_B1s &bull; Ubuntu 22.04 LTS</div>
@@ -1321,7 +1432,19 @@
 
         <div class="arch-card" onclick="showHclModal('cloudinit')">
           <div class="arch-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--azure-cyan)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+              <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
           </div>
           <div class="arch-title">Cloud-Init Automation</div>
           <div class="arch-detail">Autoinstalls & enables Nginx web server</div>
@@ -1352,7 +1475,7 @@
         </div>
 
         <div class="json-viewer" id="jsonOutput">
-// Select an endpoint and click 'Execute Request' to query live data.
+          // Select an endpoint and click 'Execute Request' to query live data.
         </div>
       </div>
     </section>
@@ -1364,12 +1487,15 @@
     <div class="container footer-content">
       <div>
         <strong style="color: var(--text-main);">CloudOps DevOps Platform</strong> &mdash; Azure CI/CD Infrastructure
-        <p style="font-size: 0.78rem; color: var(--text-dim); margin-top: 4px;">Engineered by DrawathyJ &bull; Automated with Terraform &amp; Jenkins</p>
+        <p style="font-size: 0.78rem; color: var(--text-dim); margin-top: 4px;">Engineered by DrawathyJ &bull; Automated
+          with Terraform &amp; Jenkins</p>
       </div>
       <div class="footer-meta">
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--azure-cyan);">Build v2.4.1 (Git: master)</span>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--azure-cyan);">Build v2.4.1 (Git:
+          master)</span>
         <span>&bull;</span>
-        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald);">HTTP 200 OK</span>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-emerald);">HTTP 200
+          OK</span>
       </div>
     </div>
   </footer>
@@ -1483,7 +1609,7 @@
     }
 
     function updateMetrics() {
-      const nextVal = Math.min(95, Math.max(10, baseLoad + (Math.random() * 12 - 6)));
+      const nextVal = sMath.min(95, Math.max(10, baseLoad + (Math.random() * 12 - 6)));
       points.shift();
       points.push(nextVal);
       drawChart();
@@ -1553,27 +1679,37 @@
       progressBar.style.width = '0%';
 
       const stagesData = [
-        { id: 1, name: 'Checkout SCM', percent: '20%', logs: [
-          { type: 'log-cmd', text: 'git clone https://github.com/DrawathyJ/azure-jenkins-cicd-project.git' },
-          { type: 'log-pass', text: '[PASS] Branch master checked out. Commit 165d08d verified.' }
-        ]},
-        { id: 2, name: 'Validate Website', percent: '40%', logs: [
-          { type: 'log-cmd', text: 'test -f app/index.html && grep -qi "<html" app/index.html' },
-          { type: 'log-pass', text: '[PASS] HTML syntax and semantic tags validated successfully.' }
-        ]},
-        { id: 3, name: 'Package Artifacts', percent: '60%', logs: [
-          { type: 'log-cmd', text: 'mkdir -p build && cp app/index.html build/index.html' },
-          { type: 'log-pass', text: '[PASS] Artifact build/index.html archived (Fingerprint: SHA256 6F60C183...)' }
-        ]},
-        { id: 4, name: 'Terraform Validation', percent: '80%', logs: [
-          { type: 'log-cmd', text: 'terraform fmt -check && terraform validate' },
-          { type: 'log-pass', text: '[PASS] AzureRM v4.81.0: Success! The configuration is valid.' }
-        ]},
-        { id: 5, name: 'Deploy to Azure VM', percent: '100%', logs: [
-          { type: 'log-cmd', text: 'scp -i $SSH_KEY build/index.html azureuser@$AZURE_VM_HOST:/tmp/index.html' },
-          { type: 'log-cmd', text: 'ssh -i $SSH_KEY azureuser@$AZURE_VM_HOST "chmod +x /tmp/deploy.sh && /tmp/deploy.sh"' },
-          { type: 'log-pass', text: '[PASS] Nginx service reloaded on Azure Linux VM. Site live on Port 80!' }
-        ]}
+        {
+          id: 1, name: 'Checkout SCM', percent: '20%', logs: [
+            { type: 'log-cmd', text: 'git clone https://github.com/DrawathyJ/azure-jenkins-cicd-project.git' },
+            { type: 'log-pass', text: '[PASS] Branch master checked out. Commit 165d08d verified.' }
+          ]
+        },
+        {
+          id: 2, name: 'Validate Website', percent: '40%', logs: [
+            { type: 'log-cmd', text: 'test -f app/index.html && grep -qi "<html" app/index.html' },
+            { type: 'log-pass', text: '[PASS] HTML syntax and semantic tags validated successfully.' }
+          ]
+        },
+        {
+          id: 3, name: 'Package Artifacts', percent: '60%', logs: [
+            { type: 'log-cmd', text: 'mkdir -p build && cp app/index.html build/index.html' },
+            { type: 'log-pass', text: '[PASS] Artifact build/index.html archived (Fingerprint: SHA256 6F60C183...)' }
+          ]
+        },
+        {
+          id: 4, name: 'Terraform Validation', percent: '80%', logs: [
+            { type: 'log-cmd', text: 'terraform fmt -check && terraform validate' },
+            { type: 'log-pass', text: '[PASS] AzureRM v4.81.0: Success! The configuration is valid.' }
+          ]
+        },
+        {
+          id: 5, name: 'Deploy to Azure VM', percent: '100%', logs: [
+            { type: 'log-cmd', text: 'scp -i $SSH_KEY build/index.html azureuser@$AZURE_VM_HOST:/tmp/index.html' },
+            { type: 'log-cmd', text: 'ssh -i $SSH_KEY azureuser@$AZURE_VM_HOST "chmod +x /tmp/deploy.sh && /tmp/deploy.sh"' },
+            { type: 'log-pass', text: '[PASS] Nginx service reloaded on Azure Linux VM. Site live on Port 80!' }
+          ]
+        }
       ];
 
       let currentStep = 0;
@@ -1743,4 +1879,5 @@
     }
   </script>
 </body>
+
 </html>

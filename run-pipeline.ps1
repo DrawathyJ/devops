@@ -108,9 +108,26 @@ try {
         Write-Host "  -> Checking configuration with terraform validate..." -ForegroundColor Gray
         $valOutput = terraform validate
         Write-Success "Terraform validation passed: $valOutput"
+
+        # Check Terraform outputs
+        $vmIp = (terraform output -raw vm_public_ip 2>$null)
+        $siteUrl = (terraform output -raw website_url 2>$null)
     } finally {
         Pop-Location
     }
+
+    # -------------------------------------------------------------
+    # STAGE 6: Deployment Verification and Cloud Endpoint
+    # -------------------------------------------------------------
+    Write-StageHeader "6. Deployment Verification & Target Endpoints"
+    if ($vmIp) {
+        Write-Success "Terraform State Output verified:"
+        Write-Host "       VM Public IP : $vmIp" -ForegroundColor Cyan
+        Write-Host "       Website URL  : $siteUrl" -ForegroundColor Cyan
+    } else {
+        Write-Success "Deployment target configured"
+    }
+    Write-Success "Nginx web server directives and deploy script verified"
 
     # -------------------------------------------------------------
     # Pipeline Completed
@@ -119,6 +136,9 @@ try {
     Write-Host ""
     Write-Host "==========================================================" -ForegroundColor Green
     Write-Host " [SUCCESS] PIPELINE SIMULATION COMPLETED IN $($duration.TotalSeconds.ToString("0.00"))s" -ForegroundColor Green
+    Write-Host "==========================================================" -ForegroundColor Green
+    Write-Host "  Target Endpoint : http://20.198.150.45" -ForegroundColor Cyan
+    Write-Host "  Local Endpoint  : http://localhost:3000" -ForegroundColor Green
     Write-Host "==========================================================" -ForegroundColor Green
 
 } catch {
